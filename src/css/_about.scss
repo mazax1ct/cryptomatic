@@ -1,0 +1,85 @@
+.about {
+    align-items: center;
+    background-color: var(--black_2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.04);
+    display: flex;
+    justify-content: center;
+    min-height: 480px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative;
+    z-index: auto;
+    @media(min-width: $hd) {
+        font-size: 16px;
+        line-height: 1.5;
+        min-height: 640px;
+    }
+
+    &::before {
+        background: radial-gradient(30.32% 35.39% at 50% 0%, rgba(0, 168, 148, 0.33) 0%, rgba(0, 168, 148, 0.00) 100%), #1C1C1C;
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    &::after {
+        background: url("/images/backgrounds/about.svg") no-repeat 50% 100% transparent;
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+    }
+
+    &__inner {
+        position: relative;
+        width: 100%;
+        z-index: 3;
+        @media(min-width: $sm) {
+            align-items: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+    }
+
+    h2 {
+        font-size: 48px;
+        font-weight: 800;
+        line-height: 1;
+        margin: 0;
+        @media(max-width: $sm - 0.01px) {
+            margin-bottom: 0.75em;
+        }
+        @media(min-width: $sm) {
+            font-size: 56px;
+        }
+        @media(min-width: $md) {
+            font-size: 64px;
+        }
+        @media(min-width: $hd) {
+            font-size: 72px;
+        }
+
+        small {
+            display: block;
+            font-size: 33.33333%;
+            font-weight: 600;
+            line-height: 1;
+        }
+    }
+
+    &__text {
+        p {
+            &:not(:last-child) {
+                margin-bottom: 1.5em;
+            }
+        }
+    }
+}

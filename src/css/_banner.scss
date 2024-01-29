@@ -1,0 +1,157 @@
+.banner {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    min-height: 600px;
+    margin-bottom: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: relative;
+    z-index: auto;
+    @media(min-width: $hd) {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    &::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='22' height='12' viewBox='0 0 22 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.2188 1.125C21.4531 1.35937 21.4531 1.6875 21.2188 1.92187L11.4219 11.7656C11.1875 11.9531 10.8594 11.9531 10.625 11.7656L0.828128 1.92187C0.593753 1.6875 0.593753 1.35937 0.828128 1.125L1.71875 0.187497C1.95313 -3.23874e-06 2.32813 -3.20596e-06 2.51563 0.187497L11 8.67187L19.5313 0.187498C19.7188 -1.68562e-06 20.0938 -1.65284e-06 20.3281 0.187498L21.2188 1.125Z' fill='%23F2F2F2'/%3E%3C/svg%3E%0A");
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        bottom: 48px;
+        content: '';
+        height: 56px;
+        left: 50%;
+        position: absolute;
+        top: auto;
+        transform: translateX(-50%);
+        width: 56px;
+        z-index: 2;
+    }
+
+    &__canvas {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+
+        &::before {
+            background: radial-gradient(50% 50% at 50% 0%, #08413A 0%, rgba(0,0,0,0) 100%);
+            bottom: 0;
+            content: '';
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+        }
+
+        &::after {
+            background: linear-gradient(0deg, rgba(31, 31, 31, 0.80) 0%, rgba(31, 31, 31, 0.00) 50%);
+            bottom: 0;
+            content: '';
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 2;
+        }
+    }
+
+    &__content {
+        max-width: calc(1240px + 24px);
+        margin-left: auto;
+        margin-right: auto;
+        padding: 40px 16px;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        z-index: 2;
+        @media(min-width: $hd) {
+            max-width: calc(1240px + 40px);
+            padding: 80px 20px;
+        }
+    }
+
+    &__title {
+        background: linear-gradient(180deg, #FFF 0%, #BFBFBF 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 32px;
+        line-height: 1.3;
+        margin-bottom: 0;
+        margin-top: 0;
+        text-transform: uppercase;
+        @media(min-width: 540px) {
+            font-size: 54px;
+        }
+        @media(min-width: $sm) {
+            font-size: 64px;
+        }
+        @media(min-width: $md) {
+            font-size: 96px;
+        }
+        @media(min-width: $hd) {
+            font-size: 112px;
+        }
+    }
+
+    &__text {
+        color: #DADADA;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1;
+        @media(min-width: $hd) {
+            font-size: 24px;
+        }
+    }
+
+    &__socials {
+        bottom: 112px;
+        display: flex;
+        gap: 4px;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        top: auto;
+        z-index: 2;
+        @media(min-width: $sm) {
+            bottom: 48px;
+            left: auto;
+            right: 56px;
+            transform: none;
+        }
+    }
+
+    &__social {
+        align-items: center;
+        background-color: rgba(#1A1A1A, 0.6);
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        height: 56px;
+        transition: background-color 0.3s;
+        width: 56px;
+
+        svg {
+            fill: var(--light);
+            height: 24px;
+            transition: fill 0.3s;
+            width: 24px;
+        }
+        @include hover {
+            background-color: rgba(#1A1A1A, 1);
+
+            svg {
+                fill: var(--primary);
+            }
+        }
+    }
+}
