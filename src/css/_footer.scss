@@ -35,6 +35,9 @@
     &__socials {
         display: flex;
         gap: 8px;
+        @media(max-width: $md - 0.01px) {
+            justify-content: center;
+        }
     }
 }
 
