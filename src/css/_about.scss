@@ -1,6 +1,7 @@
 .about {
     align-items: center;
     background-color: var(--black_2);
+    background: radial-gradient(30.32% 35.39% at 50% 0%, rgba(0, 168, 148, 0.33) 0%, rgba(0, 168, 148, 0) 480px), var(--black_2);
     box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.04);
     display: flex;
     justify-content: center;
@@ -16,7 +17,7 @@
     }
 
     &::before {
-        background: radial-gradient(30.32% 35.39% at 50% 0%, rgba(0, 168, 148, 0.33) 0%, rgba(0, 168, 148, 0.00) 100%), #1C1C1C;
+        background: url("../images/backgrounds/about.svg") no-repeat 50% 100% transparent;
         bottom: 0;
         content: '';
         left: 0;
@@ -24,17 +25,6 @@
         right: 0;
         top: 0;
         z-index: 1;
-    }
-
-    &::after {
-        background: url("/images/backgrounds/about.svg") no-repeat 50% 100% transparent;
-        bottom: 0;
-        content: '';
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 2;
     }
 
     &__inner {

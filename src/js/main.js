@@ -28,6 +28,7 @@ $(document).ready(function () {
   }
 });
 
+//слайдер карточек результатов
 if ($('.js-results-slider').length) {
   const swiper = new Swiper('.js-results-slider', {
     loop: true,
@@ -48,8 +49,14 @@ if ($('.js-results-slider').length) {
   });
 }
 
+//аккордион курса
+$(document).on('click', '.js-course-part-toggler', function () {
+  $(this).toggleClass('is-active');
+  $(this).closest('.course-part').find('.course-part__body').slideToggle();
+  return false;
+});
 
-//аккордион
+//аккордион faq
 $(document).on('click', '.accordion__toggler', function () {
   $(this).closest('.accordion').toggleClass('is-open');
   $(this).closest('.accordion').find('.accordion__body').slideToggle();

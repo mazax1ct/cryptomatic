@@ -44,6 +44,11 @@
     justify-content: center;
     height: 24px;
     width: 24px;
+    @include hover {
+        svg {
+            fill: var(--primary-a);
+        }
+    }
 
     svg {
         fill: var(--primary);
