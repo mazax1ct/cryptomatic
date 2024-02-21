@@ -4,6 +4,8 @@
     font-size: 15px;
     font-weight: 300;
     line-height: 1.53846;
+    position: relative;
+    z-index: 2;
 
     &__container {
         padding: 24px;

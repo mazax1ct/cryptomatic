@@ -44,6 +44,9 @@ body {
 }
 
 .page-section {
+    position: relative;
+    z-index: 2;
+
     &:not(:last-child) {
         margin-bottom: var(--section_vertical_gap);
     }
